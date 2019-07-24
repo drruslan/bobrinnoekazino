@@ -3,17 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .kvadratik{
+        border: solid 3px red;
+        height: 300px;
+        width: 300px;
+    }
+    .row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+ </style>
 </head>
 <center>
 <h1 style="color: red"> Добро пожаловать в казино "У БОБРА"</h1>
     <h1 style="color: purple"> Сегодня вас ждет незабываемая игра!!!!</h1>
 </center>
 <body>
-<img src="aliyar.jpg" width="300"/>
-<img src="danya.jpg" width="300"/>
-<img src="drus.jpg"  width="300"/>
-<img src="sharkun.jpg"  width="300"/>
-<img src="kobzev.jpg" width="300"/>
-<img src="kirill.jpg"" width="300"/>
+      <div>
+          <center>
+      <img  id="1" onclick="changeimg1()" class="kvadratik" src="kvadratik.png" width="200">
+          <img id="2" onclick="changeimg2()" class="kvadratik" src="kvadratik.png" width="200">
+          <img id="3" onclick="changeimg3()" class="kvadratik" src="kvadratik.png" width="200">
+      </center>
+      </div>
+<center>
+      <img id="changeimg" src="knopka.jpg" width="250" onclick="changeimg()">
+    </center>
+<script>
+    i=1
+    x=0
+    function changeimg() {
+        i = Math.floor(Math.random() * 6)
+        console.log(i)
+        if (i === 1) {
+            document.getElementById('1').src = 'aliyar.jpg'
+        }
+        if (i === 2) {
+            document.getElementById('1').src = 'drus.jpg'
+        }
+        if (i === 3) {
+            document.getElementById('1').src = 'kobzev.jpg'
+        }
+        if (i === 4) {
+            document.getElementById('1').src = 'sharkun.jpg'
+        }
+        if (i === 5) {
+            document.getElementById('1').src = 'kirill.jpg'
+        }
+        if(i===0){
+            document.getElementById('1').src='danya.jpg'
+        }
+        x = Math.floor(Math.random() * 6)
+        if (x === 1) {
+            document.getElementById('2').src = 'aliyar.jpg'
+        }
+        if (x === 2) {
+            document.getElementById('2').src = 'drus.jpg'
+        }
+        if (x === 3) {
+            document.getElementById('2').src = 'kobzev.jpg'
+        }
+        if (x === 4) {
+            document.getElementById('2').src = 'sharkun.jpg'
+        }
+        if (x === 5) {
+            document.getElementById('2').src = 'kirill.jpg'
+        }
+         if(x===0) {
+             document.getElementById('2').src = 'danya.jpg'
+         }
+        y = Math.floor(Math.random() * 6)
+             if (y === 1) {
+                 document.getElementById('3').src = 'aliyar.jpg'
+             }
+             if (y === 2) {
+                 document.getElementById('3').src = 'drus.jpg'
+             }
+             if (y === 3) {
+                 document.getElementById('3').src = 'kobzev.jpg'
+             }
+             if (y === 4) {
+                 document.getElementById('3').src = 'sharkun.jpg'
+             }
+             if (y === 5) {
+                 document.getElementById('3').src = 'kirill.jpg'
+             }
+             if (y === 0) {
+                 document.getElementById('3').src = 'danya.jpg'
+             }
+         }
+</script>
 </body>
+<center>
+<h1 id="score"> ваш баланс</h1>
+</center>
 </html>
